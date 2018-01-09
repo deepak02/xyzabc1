@@ -1,0 +1,50 @@
+<LinearLayout
+    android:id="@+id/toolbar_two"
+    android:layout_height="45sp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:alpha="0.9"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#8C000000"
+    android:weightSum="2">
+
+
+    <ImageButton
+        android:id="@+id/imgbtn_back_musicplayer"
+        android:layout_weight="0.25"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <LinearLayout
+        android:layout_weight="1.5"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#eee9e9"
+            android:textSize="20sp"
+            android:text="Music Player"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_weight="0.3"
+        android:id="@+id/ImageButton_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_playlist_add"
+        android:background="@null"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

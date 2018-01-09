@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1091647711903",
+    "firebase_url": "https://drj1-e337b.firebaseio.com",
+    "project_id": "drj1-e337b",
+    "storage_bucket": "drj1-e337b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091647711903:android:6015be50a5c534a7",
+        "android_client_info": {
+          "package_name": "com.music.drj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091647711903-17nagqu42b7labh1sht5blu0nm2k7drl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdMRLM2wlpkWzCU2KTOxB3Qh_GNzPu2j0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

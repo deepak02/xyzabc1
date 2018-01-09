@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sekhontech.singering.Activities.Explore">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_likes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#191C25"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarColoredBackArrow" />
+
+    <include
+        android:id="@+id/progressBarHolder"
+        layout="@layout/progress_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_likes" />
+
+    <ListView
+        android:id="@+id/listview_likes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_likes"
+        android:layout_marginTop="1dp"
+        android:focusable="false"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/framelay_no_likes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_likes"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="No Likes"
+            android:textColor="@color/mycolor"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

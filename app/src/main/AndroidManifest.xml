@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sekhontech.singering">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/mic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/mic_icon"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Activities.Splash"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".Activities.First"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Register"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Login"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+
+        <service android:name=".Notifications.FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".Notifications.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Notifications.RegistrationIntentService"
+            android:exported="false" />
+
+
+        <service
+            android:name=".service.Test_code"
+            android:stopWithTask="false" />
+
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mic_icon"/>
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+
+        <activity
+            android:name=".circleMenu.CircleActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.RadiophonyService"
+            android:stopWithTask="false" />
+
+        <service
+            android:name=".Notifications.Notification_Serviceplay"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".Activities.ForgotPassword"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Settings"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_Profile_Screen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/app_theme" />
+        <activity
+            android:name=".Activities.Player"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CROP_IMAGE.CropImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CROP_IMAGE.MonitoredActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Explore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Likes_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Search_userprofl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Profile_Screen_visit"
+            android:screenOrientation="portrait"
+            android:theme="@style/app_theme" />
+        <activity
+            android:name=".Activities.Followers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Profile_Tracks_added"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Profile_likes_added"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_following_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Playlist_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Playlist_tracks_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.About_app"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Chat_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Help_message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Notifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Friends_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Track_Edit_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_Tracks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Comments_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Message_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Stream_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_Downloads"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circleMenu.Guest_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Track_Upload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Following"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/chat_bg"
+    android:layout_height="match_parent"
+    tools:context="com.sekhontech.singering.Activities.Likes_activity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_chat"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#191C25"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:id="@+id/listview_chat"
+        android:layout_width="match_parent"
+        android:divider="#00000000"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/linearbottom"
+        android:layout_below="@+id/app_bar"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linearbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <EditText
+            android:id="@+id/Edtxt_write_message"
+            android:layout_width="match_parent"
+            android:hint="@string/xml_chat_screen_write_message"
+            android:layout_marginLeft="4sp"
+            android:layout_marginBottom="4sp"
+            android:paddingLeft="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/layout_bg_edittext" />
+
+        <ImageView
+            android:id="@+id/Iv_send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.7"
+            android:src="@drawable/ic_send" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelay_no_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/No_Chat_Available"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

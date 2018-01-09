@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#191C25"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main02">
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/myfavlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dark"
+                android:gravity="center|start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="My Favourites"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+
+            <FrameLayout
+                android:id="@+id/framefavio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearfav">
+
+                <TextView
+                    android:id="@+id/empty_fav"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:layout_gravity="center"
+                    android:background="#292929"
+                    android:gravity="center|center_vertical"
+                    android:text="No Favourite Found"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <view
+                    android:id="@+id/mRecyclerView_fav"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myrecentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myfavlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dark"
+                android:gravity="center|start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Recents"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/framerecent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearfav">
+
+                <TextView
+                    android:id="@+id/empty_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:layout_gravity="center"
+                    android:background="#292929"
+                    android:gravity="center|center_vertical"
+                    android:text="No Track Added"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <view
+                    android:id="@+id/recycler_view_recent"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mostpopularlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myrecentlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dark"
+                android:gravity="center|start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Most Popular"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearfav">
+
+                <TextView
+                    android:id="@+id/empty_popular"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:layout_gravity="center"
+                    android:background="#292929"
+                    android:gravity="center|center_vertical"
+                    android:text="No Popular Tracks"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <view
+                    android:id="@+id/recycler_view_popular"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mostlikedlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mostpopularlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dark"
+                android:gravity="center|start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Most Liked"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_most_liked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearfav">
+
+                <TextView
+                    android:id="@+id/empty_most_liked"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:layout_gravity="center"
+                    android:background="#292929"
+                    android:gravity="center|center_vertical"
+                    android:text="No Liked Track"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <view
+                    android:id="@+id/recycler_view_most_liked"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recentuserslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mostlikedlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dark"
+                android:gravity="center|start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Recent Users"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_recent_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearfav">
+
+                <TextView
+                    android:id="@+id/empty_recent_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="152sp"
+                    android:layout_gravity="center"
+                    android:background="#292929"
+                    android:gravity="center|center_vertical"
+                    android:text="No User Found"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <view
+                    android:id="@+id/recycler_view_recent_user"
+                    class="android.support.v7.widget.RecyclerView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

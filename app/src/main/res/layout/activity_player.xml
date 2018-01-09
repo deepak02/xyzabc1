@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:vumeter="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191C25"
+    android:orientation="vertical">
+
+    <!--  <include
+          android:id="@+id/player_tool"
+          layout="@layout/player_toolbar" />-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/Iv_song_image_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c9c9c9"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearbottom"
+        android:layout_below="@+id/player_tool"
+        android:alpha="0.5"
+        android:background="@color/black_translucent">
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/player_tool"
+        layout="@layout/player_toolbar" />
+
+    <ImageView
+        android:id="@+id/Iv_download_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearbottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_file_download" />
+
+
+    <ImageView
+        android:id="@+id/Iv_Comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearbottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_comments"/>
+
+    <ImageView
+        android:id="@+id/Iv_song_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Iv_Comments"
+        android:layout_below="@+id/player_tool"
+        android:layout_margin="14dp"
+        android:alpha="0.9"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+
+    <LinearLayout
+        android:id="@+id/linearbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#8C000000"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/frame_seek"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:orientation="vertical">
+
+
+            <io.gresse.hugo.vumeterlibrary.VuMeterView
+                android:id="@+id/vumeter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                vumeter:vumeter_backgroundColor="@color/black_translucent"
+                vumeter:vumeter_blockNumber="17"
+                vumeter:vumeter_blockSpacing="20dp"
+                vumeter:vumeter_speed="10"
+                vumeter:vumeter_startOff="false"
+                vumeter:vumeter_stopSize="1dp" />
+            <!-- vumeter:vumeter_backgroundColor="#D8000000"-->
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:progressBackgroundTint="@color/extra_light_gray"
+                android:progressTint="#eee9e9"
+                android:secondaryProgressTint="@color/profile_color"
+                android:thumbTint="@color/grey_light"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linear_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/Tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="7sp"
+                    android:layout_marginStart="7sp"
+                    android:layout_weight="1"
+                    android:alpha="0.7"
+                    android:text="00:00"
+                    android:textColor="#eee9e9" />
+
+                <TextView
+                    android:id="@+id/Tv_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="7sp"
+                    android:layout_marginRight="7sp"
+                    android:layout_weight="1"
+                    android:alpha="0.7"
+                    android:gravity="end"
+                    android:text="00:00"
+                    android:textAlignment="textEnd"
+                    android:textColor="#eee9e9" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_song_category"
+            android:layout_marginBottom="2sp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/Iv_share_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0"
+                android:src="@drawable/ic_share" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="2.6"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_song_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="-----"
+                    android:textColor="#ffffff"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/Iv_Lyrics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/lyrics" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_song_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linear_below"
+            android:layout_marginBottom="9sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:gravity="center"
+            android:text="song category"
+            android:textColor="#c9c9c9"
+            android:textSize="16sp" />
+
+
+        <FrameLayout
+            android:id="@+id/linear_below"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4.5">
+
+
+                <ImageView
+                    android:id="@+id/Iv_Previous_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/ic_backward_button" />
+
+
+                <ImageView
+                    android:id="@+id/Iv_btn_PlayPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_play_button" />
+
+
+                <ImageView
+                    android:id="@+id/Iv_Next_Song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/ic_forward_button" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/Iv_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_repeat_button_unclicked"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/Iv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_favorite_empty"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            custom:donut_finished_color="#41A85F"
+            custom:donut_progress="0"
+            custom:donut_text_size="28sp"
+            custom:donut_unfinished_color="#F37934"
+            vumeter:donut_text_color="#fff" />
+
+    </FrameLayout>
+
+</RelativeLayout>

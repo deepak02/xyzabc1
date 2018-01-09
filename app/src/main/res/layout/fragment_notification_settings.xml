@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#eee9e9"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10sp"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="1"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Likes\nNotifications"
+            android:textColor="#4D5059"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_Likes"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:layout_weight="0.85"
+            app:theme="@style/Color1SwitchStyle"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="1"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments\nNotifications"
+            android:textColor="#4D5059"
+            android:layout_marginRight="5sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_Comments"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:checked="false"
+            app:theme="@style/Color1SwitchStyle"
+            android:layout_weight="0.85"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="1"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat\nNotifications"
+            android:textColor="#4D5059"
+            android:layout_marginRight="5sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_Chat"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            app:theme="@style/Color1SwitchStyle"
+            android:checked="false"
+            android:layout_weight="0.85"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:weightSum="1"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friends\nNotifications"
+            android:textColor="#4D5059"
+            android:layout_marginRight="5sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_Friends"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            app:theme="@style/Color1SwitchStyle"
+            android:layout_weight="0.85"
+            android:checked="false"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="1"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emails on\nComments"
+            android:textColor="#4D5059"
+            android:layout_marginRight="22sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_EmailComments"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            android:layout_weight="0.85"
+            app:theme="@style/Color1SwitchStyle"
+            android:checked="false"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:weightSum="1"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emails on\nLikes"
+            android:textColor="#4D5059"
+            android:layout_marginRight="30sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_EmailLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:layout_weight="0.85"
+            app:theme="@style/Color1SwitchStyle"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="1"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emails on\nNew Friends"
+            android:textColor="#4D5059"
+            android:layout_marginRight="8sp"
+            android:textSize="20sp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_EmailFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="36sp"
+            android:layout_weight="0.85"
+            android:layout_gravity="center"
+            app:theme="@style/Color1SwitchStyle"
+            android:checked="false"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="false"/>
+
+    </LinearLayout>
+        <Button
+            android:id="@+id/btn_submit_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:textColor="#A5A8B1"
+            android:background="@drawable/button_round_corner"
+            android:text="Save Changes"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="70sp"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOTIFICATIONS SETTINGS"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:background="@color/transparent_popup"
+        android:textSize="20sp"
+        android:padding="5dp"/>
+</RelativeLayout>

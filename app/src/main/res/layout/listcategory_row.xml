@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#191C25">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2.5dp">
+
+        <RelativeLayout
+            android:layout_width="130sp"
+            android:layout_height="138sp"
+            android:layout_gravity="center|center_horizontal"
+            android:background="#4a4a4a">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_centerInParent="true"
+                android:background="#4a4a4a"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/adele"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_above_one" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/thumbnail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="My Radio Name"
+                android:textColor="#f2f2f2"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

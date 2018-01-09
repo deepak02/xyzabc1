@@ -1,0 +1,341 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gpb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sekhontech.singering.Fragments.GeneralSetting">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:background="#191C25"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#eee9e9"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10sp"
+                         android:layout_marginRight="10sp"
+                         android:text="Upload Track Image"
+                         android:textAlignment="center"
+                         android:textStyle="italic"
+                         android:layout_marginTop="35dp"
+                         android:textColor="#4D5059"
+                         android:textSize="25sp" />-->
+
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/track_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="#CDCDCF"
+                    app:civ_border_color="#d4cccc"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/layout_background"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_chooseImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:text="Upload Image"
+                        android:textAllCaps="false" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/layout_background"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btn_choosetrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Upload Track (mp3 file)"
+                    android:textAllCaps="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/OR"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_record_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/button"
+                        android:drawableLeft="@drawable/button"
+                        android:drawablePadding="10dp"
+                        android:layout_marginRight="20dp"
+                        android:textAllCaps="false"
+                        android:text="Record"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"/>
+
+
+                    <Button
+                        android:id="@+id/btn_record_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_recorder_stop_button"
+                        android:drawableLeft="@drawable/ic_recorder_stop_button"
+                        android:drawablePadding="10dp"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="20dp"
+                        android:text="Stop"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+
+                
+
+                <TextView
+                    android:id="@+id/messageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="No file chosen"
+                    android:textColor="#4D5059"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:orientation="vertical"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:text="Title *"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Title"
+                    android:inputType="text"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:text="Description"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/edttxt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:gravity="top"
+                    android:hint="Description"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="53sp"
+                    android:text="Tags *"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Tag"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp"
+                    android:paddingStart="10sp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@drawable/button_round_corner"
+                android:text="Save Changes"
+                android:textColor="#A5A8B1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:id="@+id/progress_area"
+        android:background="@color/transparent_popup"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <!--<com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_progress"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            custom:donut_progress="0"
+            custom:donut_unfinished_color="#5678C2"
+            custom:donut_finished_color="#FFFFFF"
+            custom:donut_text_size="28sp"/>-->
+
+
+        <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+            android:id="@+id/googleProgressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            gpb:colors="@array/colors"
+            gpb:type="folding_circles"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Uploading file..."/>
+
+
+    </FrameLayout>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_popup"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="GENERAL"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp" />-->
+</RelativeLayout>

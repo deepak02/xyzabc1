@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:background="#292727"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playlist"
+                android:textColor="#fff"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_below="@+id/rel1"
+            android:layout_height="1dp">
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_margin="25dp"
+            android:id="@+id/edttxt_create_playlist"
+            android:paddingLeft="10sp"
+            android:textColor="#fff"
+            android:inputType="text"
+            android:textColorHint="#fff"
+            android:background="@drawable/layout_bg_playlist_edittxt"
+            android:hint="Create new playlist"
+            />
+
+        <Button
+            android:layout_below="@+id/edttxt_create_playlist"
+            android:id="@+id/btn_add_playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_round_corner"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="#e1dccc" />
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/btn_add_playlist"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_above="@+id/closelayout"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/listview_playlist"
+                android:visibility="visible"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txtv_no_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No playlist found"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textSize="26dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/closelayout"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btn_close_playlist"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    android:textColorHint="#fff"
+                    android:background="@drawable/layout_bg_playlist_edittxt"
+                    android:hint="Close"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

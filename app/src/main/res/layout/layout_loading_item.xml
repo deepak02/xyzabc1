@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:gravity="start|center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="start|center"
+        android:gravity="start">
+
+
+
+        <Button
+            android:id="@+id/btn_loadmore"
+            android:layout_width="wrap_content"
+            android:text="Load More"
+            android:layout_centerVertical="true"
+            android:layout_height="40dp" />
+
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/progressBar1"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_loadmore"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:cpb_color="#FFee44"
+            app:cpb_colors="@array/colors"
+            app:cpb_max_sweep_angle="300"
+            app:cpb_min_sweep_angle="10"
+            app:cpb_rotation_speed="1.0"
+            app:cpb_stroke_width="5dp"
+            app:cpb_sweep_speed="1.0" />
+
+        <ProgressBar
+            android:id="@+id/progressBar12"
+            style="@style/Base.V11.ThemeOverlay.AppCompat.Dialog"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start" />
+
+
+        <TextView
+            android:id="@+id/txt_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@+id/btn_loadmore"
+            android:textColor="#FFee44"
+            android:visibility="gone"
+            android:gravity="start"
+            android:text="Loading...." />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

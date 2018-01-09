@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sekhontech.singering.Fragments.GeneralSetting">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee9e9"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20sp"
+                    android:text="Facebook"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Facebook profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="48sp"
+                    android:text="Twitter"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_twitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Twitter profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35sp"
+                    android:text="Google+"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Google+ profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:text="YouTube"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your YouTube profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SoundCloud"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_soundcloud"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your SoundCloud profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="28sp"
+                    android:text="MySpace"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_myspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your MySpace profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40sp"
+                    android:text="Last.fm"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_lastfm"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Last.fm profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50sp"
+                    android:text="Vimeo"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_vimeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Vimeo profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="43sp"
+                    android:text="Tumblr"
+                    android:textColor="#4D5059"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edttxt_tumblr"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Your Tumblr profile ID."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_social_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@drawable/button_round_corner"
+                android:text="Save Changes"
+                android:textColor="#A5A8B1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60sp"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_popup"
+        android:text="SOCIAL NETWORKS PROFILES"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:padding="5dp" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_margin="10sp"
+        android:background="#eee9e9"
+        android:src="@drawable/mic_icon"
+        android:scaleType="fitCenter" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/help_text"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_margin="15sp"
+        android:id="@+id/text_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        android:textColor="#ff000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_dialog"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+    <Button
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:layout_marginLeft="30sp"
+         android:layout_marginRight="30sp"
+         android:text="@string/OK"
+         android:id="@+id/btn_no"
+         android:background="@drawable/button_round_corner"
+         android:textColor="#ffffffff"
+         android:layout_gravity="center"
+         android:layout_below="@+id/text_dialog"/>
+
+    </LinearLayout>
+</LinearLayout>

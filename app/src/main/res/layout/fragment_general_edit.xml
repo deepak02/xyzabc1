@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sekhontech.singering.Fragments.GeneralSetting">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#eee9e9"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="Change track Image"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:layout_marginTop="35dp"
+                    android:textColor="#4D5059"
+                    android:textSize="25sp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/track_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="#CDCDCF"
+                    app:civ_border_color="#d4cccc"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/layout_background"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_chooseImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:text="Upload Image" />
+
+                    <!--<TextView
+                        android:id="@+id/messageprint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:textSize="15sp"
+                        android:textColor="#4D5059"
+                        android:text="No file chosen"
+                        android:layout_weight="1"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4D5059"
+                    android:text="Title *"
+                    android:layout_marginRight="5sp"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/edttxt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:paddingLeft="10sp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Title"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="#4D5059"
+                    android:layout_marginRight="5sp"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:id="@+id/edttxt_description"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="5dp"
+                    android:gravity="top"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Description"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tags *"
+                    android:textColor="#4D5059"
+                    android:layout_marginRight="53sp"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:id="@+id/edttxt_tag"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10sp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/layout_bg_edittext"
+                    android:hint="Tag"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_round_corner"
+                android:text="Save Changes"
+                android:layout_margin="20sp"
+                android:textColor="#A5A8B1"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GENERAL"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:background="@color/transparent_popup"
+        android:textSize="20sp"
+        android:padding="5dp"/>
+</RelativeLayout>

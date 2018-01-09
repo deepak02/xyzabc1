@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sekhontech.singering.Fragments.GeneralSetting">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="#eee9e9"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48sp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visibility"
+                    android:layout_marginTop="4sp"
+                    android:layout_gravity="center"
+                    android:textColor="#4D5059"
+                    android:layout_marginRight="50sp"
+                    android:textSize="20sp"/>
+
+
+                <!-- <com.sekhontech.singering_app.views.NiceSpinner
+                     android:id="@+id/nice_spinner"
+                     android:background="@drawable/layout_bg_edittext"
+                     android:backgroundTint="#eee9e9"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />-->
+                <Spinner
+                    style="@style/submitspinner"
+                    android:layout_gravity="center"
+                    android:id="@+id/spinner_visibility" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allow downloads"
+                    android:layout_gravity="center"
+                    android:textColor="#4D5059"
+                    android:layout_marginRight="5sp"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_allow_download"
+                    android:layout_gravity="center"
+                    style="@style/submitspinner" />
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_save_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_round_corner"
+                android:text="Save"
+                android:layout_margin="20sp"
+                android:textColor="#A5A8B1"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Permissions"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:background="@color/transparent_popup"
+        android:textSize="20sp"
+        android:padding="5dp"/>
+</RelativeLayout>

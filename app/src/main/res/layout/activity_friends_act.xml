@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sekhontech.singering.Activities.Explore">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar123456"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:background="#191C25"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <include
+        android:layout_below="@+id/toolbar123456"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/progressBarHolder"
+        layout="@layout/progress_loader"/>
+
+    <ListView
+        android:id="@+id/list_view_recent_avtivity"
+        android:layout_below="@+id/toolbar123456"
+        android:layout_above="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0.5dp"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:visibility="gone"/>
+
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

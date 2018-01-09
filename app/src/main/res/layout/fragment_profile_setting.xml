@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee9e9"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="35dp"
+                android:text="Change your profile picture"
+                android:textAlignment="center"
+                android:textColor="#4D5059"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="#CDCDCF"
+                app:civ_border_color="#d4cccc"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_chooseProfile_Img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Choose File" />
+
+                <!--<TextView
+                    android:id="@+id/messageprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:textSize="15sp"
+                    android:textColor="#4D5059"
+                    android:text="No file chosen"
+                    android:layout_weight="1"/>-->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_set_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_round_corner"
+                android:text="Upload photo"
+                android:textColor="#A5A8B1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="30dp"
+                android:text="Change your cover picture"
+                android:textAlignment="center"
+                android:textColor="#4D5059"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+
+            <ImageView
+                android:id="@+id/Iv_cover_pic"
+                android:layout_width="match_parent"
+                android:layout_height="190sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="12sp"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="#CDCDCF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_choosecover_Img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="Choose File" />
+
+                <!-- <TextView
+                     android:id="@+id/messageprinttwo"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10sp"
+                     android:textSize="15sp"
+                     android:textColor="#4D5059"
+                     android:text="No file chosen"
+                     android:layout_weight="1"/>-->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_set_cover_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_round_corner"
+                android:text="Upload Cover"
+                android:textColor="#A5A8B1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80sp"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_popup"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="PROFILE SETTINGS"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+</RelativeLayout>

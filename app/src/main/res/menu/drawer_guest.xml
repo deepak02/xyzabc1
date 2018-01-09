@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+
+
+        <item android:id="@+id/stream"
+            android:checked="false"
+            android:icon="@drawable/ic_microphone"
+            android:title="Stream"/>
+
+
+        <item android:id="@+id/upload_track"
+            android:checked="false"
+            android:icon="@drawable/ic_upload_button"
+            android:title="Upload Track"/>
+
+
+        <item android:id="@+id/downloads"
+            android:checked="false"
+            android:icon="@drawable/ic_file_download_two"
+            android:title="My Downloads"/>
+
+        <item android:id="@+id/explore"
+            android:checked="false"
+            android:icon="@drawable/ic_explore"
+            android:title="Explore"/>
+
+        <item
+            android:id="@+id/profile"
+            android:checked="false"
+            android:icon="@drawable/friends_icon"
+            android:title="Profile" />
+
+
+        <item android:id="@+id/my_tracks"
+            android:checked="false"
+            android:icon="@drawable/ic_myrecord"
+            android:title="My Tracks"/>
+
+
+        <item
+            android:id="@+id/likes"
+            android:checked="false"
+            android:icon="@drawable/thumb_up_button"
+            android:title="Likes" />
+
+
+
+        <item
+            android:id="@+id/message"
+            android:checked="false"
+            android:icon="@drawable/ic_message"
+            android:title="Messages"/>
+
+        <item
+            android:id="@+id/playlist"
+            android:checked="false"
+            android:icon="@drawable/ic_music_playlist"
+            android:title="Playlist" />
+
+
+
+        <item
+            android:id="@+id/player"
+            android:checked="false"
+            android:icon="@drawable/stream_icon"
+            android:title="Player" />
+
+        <item
+            android:id="@+id/search"
+            android:checked="false"
+            android:icon="@drawable/icon_search"
+            android:title="Search Profile" />
+
+        <item
+            android:id="@+id/friends_activity"
+            android:checked="false"
+            android:icon="@drawable/ic_friend_activity"
+            app:actionLayout="@layout/menu_count_two"
+            android:title="Friends Activity" />
+
+        <item
+            android:id="@+id/notification"
+            android:checked="false"
+            android:icon="@drawable/notification_icon"
+            app:actionLayout="@layout/menu_counter"
+            android:title="Notifications" />
+
+        <item
+            android:id="@+id/settings"
+            android:checked="false"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+
+
+        <item
+            android:id="@+id/more_apps"
+            android:checked="false"
+            android:icon="@drawable/icon_playstore"
+            android:title="More Apps" />
+
+    </group>
+</menu>
+
